@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose --runInBand",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
   "author": "Timothy Tsui <timiscoding@gmail.com> (https://github.com/timiscoding)",
   "license": "MIT",
   "prettier": {},
   "dependencies": {
+    "jest": "24.9.0",
     "node-fetch": "2.6.0"
   }
 }
