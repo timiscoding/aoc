@@ -25,12 +25,7 @@ Then run
 
 This will fetch your input data from the Advent of Code site.
 
-2. Create a `.txt` file with the input data inside the puzzle folder and run
-
-`node main.js input.txt`
-
-3. Create a `.js` file. This lets you store all test inputs in one file instead
-   of having multiple text files with a single input in each.
+2. Create a `.txt` or `.js` file. A .js file lets you store all test inputs in one file while a .txt file contains only one data input.
 
 Just change the line in `main.js` to run a specific input:
 
@@ -41,13 +36,13 @@ const main = async () => {
   // replace this
   const input = await getInputFromServer(1);
   // with this
-  const { test1: input } = await getInputFromFile(1, process.argv[2]); // puzzle day 1, test1 is exported from data.js
+  const { test1: input } = await getInputFromFile(process.argv[2]); // test1 is exported from data.js
 }
 ```
 
 then run
 
-`node main.js data.js`
+`node main.js 01/data.js`
 
 # Run tests
 

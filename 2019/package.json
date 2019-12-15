@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "jest --verbose --runInBand",
+    "test:watch": "jest --verbose --runInBand --watch",
     "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand"
   },
   "keywords": [],

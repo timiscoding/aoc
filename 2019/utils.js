@@ -10,9 +10,9 @@ const transform = (str, sep, map = v => v) => {
     .map(map);
 };
 
-const getInputFromFile = (day, pathname) => {
+const getInputFromFile = pathname => {
   return path.extname(pathname) === ".js"
-    ? require(`./${String(day).padStart(2, "0")}/${pathname}`)
+    ? require(`./${pathname}`)
     : fs.readFileSync(pathname, { encoding: "utf8" });
 };
 

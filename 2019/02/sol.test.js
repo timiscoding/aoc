@@ -3,7 +3,7 @@ const { run } = require("./sol");
 
 let input;
 beforeAll(() => {
-  input = getInputFromFile(2, "data.js");
+  input = getInputFromFile("02/data.js");
   for (let [name, data] of Object.entries(input)) {
     input[name] = transform(data, ",", v => +v);
   }
